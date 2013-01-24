@@ -163,6 +163,7 @@
 				, $target = $($this.attr('data-target') || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) //strip for ie7
 				, option = this.data_modal ? 'toggle' : {}
 			e.preventDefault()
+			e.stopPropagation()
 			$target.modal(option)
 		})
 	})
